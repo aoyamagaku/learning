@@ -37,3 +37,28 @@
 -- from film
 -- where length > 120 AND
 --         (rating = 'G' or rating = 'PG');
+
+-- select count(rental_id)
+-- from rental;
+
+-- select title, rating
+-- from film
+-- where rating not IN ('G', 'PG-13', 'PG');
+
+-- select count(*)
+-- from rental
+-- where return_date is NULL;
+
+-- select first_name, last_name
+-- from actor
+-- where last_name like 'S%N';
+--
+-- select first_name, last_name
+-- from actor
+-- where first_name like '____';
+
+-- select title
+-- from film
+-- where lower(title) like '%love%';
+
+-- закончил задачу 7, продолжать с 8
