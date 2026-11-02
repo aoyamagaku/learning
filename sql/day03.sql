@@ -61,4 +61,56 @@
 -- from film
 -- where lower(title) like '%love%';
 
--- закончил задачу 7, продолжать с 8
+-- create or replace function customer_tier(p_customer_id INT)
+-- returns varchar
+-- language plpgsql
+-- as $$
+-- declare
+--     rental_count INT;
+-- begin
+--     select count(*)
+--     into rental_count
+--     from rental
+--     where customer_id = p_customer_id
+--
+--     if rental_count >= 30 then
+--         return 'Gold';
+--     elsif rental_count >= 20 then
+--         return 'Silver';
+--     else
+--         return 'Bronze';
+--     end if;
+-- end;
+-- $$;
+
+-- create or replace function film_length_category(p_film_id INT)
+-- returns varchar
+-- language plpgsql
+-- as $$
+-- declare
+--     film_length INT;
+-- begin
+--     select length
+--     into film_length
+--     from film
+--     where film_id = p_film_id;
+--
+--     return case
+--         when film_length < 60 then 'Short'
+--         when film_length <= 120 then 'Medium'
+--         else 'Long'
+--     end;
+-- end;
+-- $$;
+
+-- select title
+-- from film
+-- where title ~ '^[A-Z]+ [A-Z]+$';
+
+-- select last_name, first_name
+-- from actor
+-- where last_name ~ '([A-Z])\1';
+
+-- select rental_id, rental_date, return_date
+-- from rental
+-- order by return_date is null desc , rental_date desc;
