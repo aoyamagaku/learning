@@ -1,19 +1,112 @@
-class Cat:
-    name =  None
-    age = None
-    isHappy = None
+# class Cat:
+#     name =  None
+#     age = None
+#     isHappy = None
+#
+#     def __init__(self, name, age, isHappy):
+#         self.set_data(name, age, isHappy)
+#         self.get_data()
+#
+#     def set_data(self, name, age, isHappy):
+#         self.name = name
+#         self.age = age
+#         self.isHappy = isHappy
+#
+#     def get_data(self):
+#         print("Name:", self.name, "age:", self.age, "Happy:", self.isHappy)
+#
+# cat1 = Cat("Barsik", 3, True)
+# cat2 = Cat("Max", 2, False)
 
-    def __init__(self, name, age, isHappy):
-        self.set_data(name, age, isHappy)
-        self.get_data()
+# class Vector:
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y
+#
+#     def __str__(self):
+#         return f"Vector: ({self.x}, {self.y})"
+#
+#     def __eq__(self, other):
+#         return self.x == other.x and self.y == other.y
+#
+#     def __add__(self, other):
+#         return Vector(self.x + other.x, self.y + other.y)
+#
+#     def __sub__(self, other):
+#         return Vector(self.x - other.x, self.y - other.y)
+#
+# v1 = Vector(3, 4)
+# v2 = Vector(1,2)
+# print(v1 + v2)
+# print(v1 - v2)
+# print(v1)
 
-    def set_data(self, name, age, isHappy):
+# class Robot:
+#     count = 0
+#
+#     def __init__(self, name):
+#         self.name = name
+#         Robot.count += 1
+#
+# r1 = Robot("R2")
+# r2 = Robot("C3")
+# r3 = Robot("BB")
+#
+# print(Robot.count)
+# print(r3.count)
+
+# class Student:
+#
+#     def __init__(self, name, grades = None):
+#         if grades is None:
+#             grades = []
+#         self.name = name
+#         self.grades = grades
+#
+#     def add_grade(self, grade):
+#         self.grades.append(grade)
+#
+#     def average(self):
+#         if len(self.grades) == 0:
+#             return 0
+#         else:
+#             return sum(self.grades) / len(self.grades)
+#
+# s1 = Student("John")
+# s2 = Student("Alice")
+# s1.add_grade(5)
+# s1.add_grade(4)
+#
+# print(s1.grades)
+# print(s2.grades)
+# print(s1.average())
+# print(s2.average())
+
+class Playlist:
+
+    def __init__(self, name, songs= None):
         self.name = name
-        self.age = age
-        self.isHappy = isHappy
+        if songs is None:
+            songs = []
+        self.songs = songs
 
-    def get_data(self):
-        print("Name:", self.name, "age:", self.age, "Happy:", self.isHappy)
+    def add(self, song):
+        self.songs.append(song)
 
-cat1 = Cat("Barsik", 3, True)
-cat2 = Cat("Max", 2, False)
+    def __len__(self):
+        return len(self.songs)
+
+    def __str__(self):
+        return f"Playlist: {self.name}: {len(self.songs)} songs"
+
+
+p1 = Playlist("Rock")
+p2 = Playlist("Jazz")
+p1.add("Song A")
+p1.add("Song B")
+p1.add("Song C")
+
+print(len(p1))   # 3
+print(len(p2))   # 0
+print(p1)        # Плейлист "Рок": 3 песен
+print(p2)
