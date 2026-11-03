@@ -82,31 +82,70 @@
 # print(s1.average())
 # print(s2.average())
 
-class Playlist:
+# class Playlist:
+#
+#     def __init__(self, name, songs= None):
+#         self.name = name
+#         if songs is None:
+#             songs = []
+#         self.songs = songs
+#
+#     def add(self, song):
+#         self.songs.append(song)
+#
+#     def __len__(self):
+#         return len(self.songs)
+#
+#     def __str__(self):
+#         return f"Playlist: {self.name}: {len(self.songs)} songs"
+#
+#
+# p1 = Playlist("Rock")
+# p2 = Playlist("Jazz")
+# p1.add("Song A")
+# p1.add("Song B")
+# p1.add("Song C")
+#
+# print(len(p1))   # 3
+# print(len(p2))   # 0
+# print(p1)        # Плейлист "Рок": 3 песен
+# print(p2)
 
-    def __init__(self, name, songs= None):
-        self.name = name
-        if songs is None:
-            songs = []
-        self.songs = songs
 
-    def add(self, song):
-        self.songs.append(song)
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#     def greet(self):
+#         return f"Hello my name is {self.name}. I'm  {self.age} years old"
+#
+# class Student(Person):
+#     def __init__(self, name, age, school):
+#         super().__init__(name, age)
+#         self.school = school
+#     def greet(self):
+#         base = super().greet()
+#         return f"{base}. I studying at the {self.school}"
+#
+# boris = Person("Boris", 18)
+# print(boris.greet())
+# anna = Student("Anna", 22, "MGU")
+# print(anna.greet())
 
-    def __len__(self):
-        return len(self.songs)
-
-    def __str__(self):
-        return f"Playlist: {self.name}: {len(self.songs)} songs"
 
 
-p1 = Playlist("Rock")
-p2 = Playlist("Jazz")
-p1.add("Song A")
-p1.add("Song B")
-p1.add("Song C")
-
-print(len(p1))   # 3
-print(len(p2))   # 0
-print(p1)        # Плейлист "Рок": 3 песен
-print(p2)
+# class Ticket:
+#     def __init__(self, cost):
+#         self.cost = cost
+#
+#     def final_price(self):
+#         return self.cost
+#
+#
+# class ChildTicket(Ticket):
+#     def final_price(self):
+#         return self.cost // 2
+#
+#
+# child = ChildTicket(400)
+# print(child.final_price())
