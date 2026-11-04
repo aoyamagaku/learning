@@ -102,6 +102,12 @@
 --     end;
 -- end;
 -- $$;
+--
+-- select film_length_category(film_id) AS category, count(title) as films
+-- from film
+-- group by category
+-- order by films desc;
+
 
 -- select title
 -- from film
@@ -114,3 +120,35 @@
 -- select rental_id, rental_date, return_date
 -- from rental
 -- order by return_date is null desc , rental_date desc;
+
+-- select rating, rental_duration, count(film_id), round(avg(length))
+-- from film
+-- group by rating, rental_duration
+-- order by rating, rental_duration;
+
+-- create or replace function payment_level(p_payment_id INT)
+-- returns varchar
+-- language plpgsql
+-- as $$
+-- declare
+--     payment_amount numeric;
+-- begin
+--     select amount
+--     into payment_amount
+--     from payment
+--     where p_payment_id = payment_id;
+--
+--     return case
+--         when payment_amount > 5 then 'High'
+--         when payment_amount between 2 and 5 then 'Mid'
+--         else 'Low'
+--     end;
+--
+--
+-- end;
+-- $$;
+
+
+-- select title
+-- from film
+-- where title ~ '^[A-Z]+$';
