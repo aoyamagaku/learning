@@ -220,4 +220,4 @@ __marimo__/
 .streamlit/secrets.toml
 .idea/
 .DS_Store
-python/todo/todo.json
+python/05-todo-json/todo.json
