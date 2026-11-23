@@ -1,0 +1,20 @@
+-- select country, sum(amount)
+-- from country
+-- join city on country.country_id = city.country_id
+-- join address on city.city_id = address.city_id
+-- join customer on address.address_id = customer.address_id
+-- join payment on payment.customer_id = customer.customer_id
+-- group by country
+-- order by sum(amount) desc
+-- limit 10
+--
+-- select film.film_id, title
+-- from film
+-- left join inventory on inventory.film_id = film.film_id
+-- where inventory.film_id is null;
+--
+-- select first_name, last_name, count(film_actor.film_id)
+-- from actor
+-- left join film_actor on actor.actor_id = film_actor.actor_id
+-- group by actor.actor_id
+-- order by count(film_actor.film_id) desc;
